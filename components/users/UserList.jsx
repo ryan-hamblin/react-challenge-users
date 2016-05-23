@@ -7,6 +7,7 @@ class UserList extends Component{
                 {this.props.People.map(person => {
                     return <User 
                         users={person}
+                        key={person.Id}
                         {...this.props}
                     />
                 })}

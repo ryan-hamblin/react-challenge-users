@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
 
 class User extends Component{
-     render(){
-        return(
-            <li>
-                <a href={this.props.users.Name}>{this.props.users.Name}</a>
-            </li>
-        )
-     }
+    onClick(e){
+        e.preventDefault();
+        const {setUser, user} = this.props;
+        setUser(user);
+    }
+    render(){
+        const {user, activeUser} = this.props;
+        const active = user === activeUser ? 'active' : '';
+    return(
+        <li className={active}>
+            <a onClick={this.onClick.bind(this)}>
+                {this.props.users.Name}
+            </a>
+        </li>
+    )
+    }
 }
 
 export default User;
