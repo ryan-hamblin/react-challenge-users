@@ -1,22 +1,24 @@
 import React, {Component} from 'react';
 import UserCard from './UserCard.jsx';
+
 class User extends Component{
     onClick(e){
         e.preventDefault();
-        const {setUser, user} = this.props;
-        setUser(user);
+        const {updateUserId, user} = this.props;
+        updateUserId(user);
     }
     render(){
-    const {user, activeUser} = this.props;
+    const {user, activeUser, userIdToShow} = this.props;
     const active = user === activeUser ? 'active' : '';
+
     return(
         <li className={active}>
-            <a onClick={this.onClick.bind(this)}>
+            <a onClick={() => this.props.updateUserId(this.props.users.Id)}>
                 {this.props.users.Name}
             </a>
-            <UserCard 
-                {...this.props}
-            />
+            {userIdToShow
+                ? <UserCard user={this.props.People[userIdToShow-1]}/>
+                : null}
         </li>
     )
     }
