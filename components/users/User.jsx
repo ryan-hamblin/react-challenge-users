@@ -12,13 +12,11 @@ class User extends Component{
     const active = user === activeUser ? 'active' : '';
 
     return(
-        <li className={active}>
+        <li className={active} role='presentation'>
             <a onClick={() => this.props.updateUserId(this.props.users.Id)}>
                 {this.props.users.Name}
             </a>
-            {userIdToShow
-                ? <UserCard user={this.props.People[userIdToShow-1]}/>
-                : null}
+            {userIdToShow ? <UserCard user={this.props.People[userIdToShow-1]}/> : null}
         </li>
     )
     }

@@ -8,3 +8,17 @@ li{
 a{
   cursor: pointer;
 }
+.line-up {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+}
+.image-wrap {
+    height: 150px;
+    width: 150px;
+}
+.image-wrap img{
+    height: 100%;
+    width: 100%;
+    border-radius: 90px;
+}

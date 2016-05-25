@@ -3,29 +3,26 @@ import React, {Component, PropTypes} from 'react';
 class UserCard extends Component {
     render () {
         return (
-            <div>
-                {Object.keys(this.props.user).map((key) => {
-                    return (
-                        <div key={key}>
-                            <h3>Name: {this.props.user.Name}</h3>
-                            <p><strong>Title: {this.props.user.Title}</strong></p>
-                            <p>Phone: {this.props.user.Phone}</p>
-                            <div>
-                                <p>Address: 
-                                    {this.props.user.Street} 
-                                    <br/>
-                                    {this.props.user.City} 
-                                    <br/>
-                                    {this.props.user.Sate}
-                                    {this.props.user.Zipcode}
-                                </p>
-                            </div>
-                            <p>Email: {this.props.user.Email}</p>
-                            <p>Birthday: {this.props.user.Birthday}</p>
-                            <img src={this.props.user.Picture}/>
-                        </div>
-                    )
-                })}
+            <div className='user-card'>
+                <h4>Name: {this.props.user.Name}</h4>
+                <div className='image-wrap'>
+                    <img src={this.props.user.Picture}/>
+                </div>
+                <p><strong>Occupation: {this.props.user.Title}</strong></p>
+                <p>Phone: {this.props.user.Phone}</p>
+                <div className='address-block'>
+                    <p>Address: 
+                        <br/>
+                        {this.props.user.Street} 
+                        <br/>
+                        {this.props.user.City}, {this.props.user.State} 
+                        <br/>
+                        {this.props.user.Zipcode}
+                    </p>
+                </div>
+                <p>Email: {this.props.user.Email}</p>
+                <p>Birthday: {this.props.user.Birthday}</p>
+                
             </div>
         )
     }
