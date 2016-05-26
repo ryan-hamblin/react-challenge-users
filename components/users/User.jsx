@@ -16,7 +16,9 @@ class User extends Component{
             <a onClick={() => this.props.updateUserId(this.props.users.Id)}>
                 {this.props.users.Name}
             </a>
-            {userIdToShow ? <UserCard user={this.props.People[userIdToShow-1]}/> : null}
+            {userIdToShow ? <UserCard 
+                key={this.props.users.Id}
+                user={this.props.People[userIdToShow-1]}/> : null}
         </li>
     )
     }

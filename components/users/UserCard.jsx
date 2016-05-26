@@ -4,11 +4,13 @@ class UserCard extends Component {
     render () {
         return (
             <div className='user-card'>
-                <h4>Name: {this.props.user.Name}</h4>
-                <div className='image-wrap'>
-                    <img src={this.props.user.Picture}/>
+                <div className='center-text'>
+                    <h4>{this.props.user.Name}</h4>
+                    <div className='image-wrap'>
+                        <img src={this.props.user.Picture}/>
+                    </div>
+                    <p><strong>Occupation: {this.props.user.Title}</strong></p>
                 </div>
-                <p><strong>Occupation: {this.props.user.Title}</strong></p>
                 <p>Phone: {this.props.user.Phone}</p>
                 <div className='address-block'>
                     <p>Address: 
@@ -20,6 +22,7 @@ class UserCard extends Component {
                         {this.props.user.Zipcode}
                     </p>
                 </div>
+                <hr/>
                 <p>Email: {this.props.user.Email}</p>
                 <p>Birthday: {this.props.user.Birthday}</p>
                 

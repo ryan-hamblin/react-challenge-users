@@ -64,7 +64,6 @@ class App extends Component{
         this.updateUserId = this.updateUserId.bind(this)
      }
     updateUserId(userIdToShow){
-        console.log("userIdToShow", userIdToShow);
         this.setState({userIdToShow})
     }
     render(){

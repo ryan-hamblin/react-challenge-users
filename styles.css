@@ -11,14 +11,19 @@ a{
 .line-up {
     display: flex;
     flex-direction: row;
-    margin-left: 25px;
+    
 }
 .image-wrap {
     height: 150px;
     width: 150px;
+    display: inline-flex;
+    align-items: center;
 }
 .image-wrap img{
     height: 100%;
     width: 100%;
     border-radius: 90px;
+}
+.center-text {
+  text-align: center;
 }
