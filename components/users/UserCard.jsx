@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 
 class UserCard extends Component {
-    render () {
+    render () {    
         return (
             <div className='user-card'>
                 <div className='center-text'>
