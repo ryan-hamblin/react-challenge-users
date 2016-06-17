@@ -16,6 +16,7 @@
   "dependencies": {
     "babel-core": "^6.9.0",
     "react-dom": "^15.1.0",
+    "react-toolbox": "^1.0.0",
     "webpack-dev-server": "^1.14.1"
   }
 }
